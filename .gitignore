@@ -1,0 +1,135 @@
+# =========================
+# Node Modules
+# =========================
+node_modules/
+jspm_packages/
+bower_components/
+
+# =========================
+# Build / Production
+# =========================
+build/
+dist/
+out/
+.next/
+.nuxt/
+.cache/
+coverage/
+.tmp/
+.temp/
+
+# =========================
+# Logs
+# =========================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# =========================
+# Environment Variables
+# =========================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# =========================
+# Dependency Directories
+# =========================
+.pnp/
+.pnp.js
+
+# =========================
+# IDE / Editor
+# =========================
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.code-workspace
+
+# =========================
+# OS Generated Files
+# =========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+# Package Manager Files
+# =========================
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# =========================
+# Temporary Files
+# =========================
+*.tmp
+*.temp
+*.cache
+*.bak
+
+# =========================
+# Testing
+# =========================
+coverage/
+.nyc_output/
+
+# =========================
+# Compiled Files
+# =========================
+*.class
+*.jar
+*.war
+*.pyc
+
+# =========================
+# Uploads / Generated Files
+# =========================
+uploads/
+public/uploads/
+
+# =========================
+# Docker
+# =========================
+docker-compose.override.yml
+
+# =========================
+# Mac System
+# =========================
+.AppleDouble
+.LSOverride
+
+# =========================
+# Linux System
+# =========================
+*~
+
+# =========================
+# Windows System
+# =========================
+ehthumbs.db
+
+# =========================
+# Nested directories ignore example
+# =========================
+**/node_modules/
+**/dist/
+**/build/
+**/.cache/
+
+# =========================
+# Secret Files
+# =========================
+*.pem
+*.key
+*.crt
+secrets.json
