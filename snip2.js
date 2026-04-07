@@ -155,26 +155,36 @@ calling typeof f.
 
 
 //-----------------------------------------------------------------------------------------------------------
-//2
-var num = 4;
-function outer() {
-    var num = 2;
-    function inner() {
-        num++;
-        console.log("num1", num); //NaN
-        var num = 3;
-        console.log("num", num); //3
-    }
-    inner();
-}
-outer();
+//8
+// var num = 4;
+// function outer() {
+//     var num = 2;
+//     function inner() {
+//         num++;
+//         console.log("num1", num); //NaN
+//         var num = 3;
+//         console.log("num", num); //3
+//     }
+//     inner();
+// }
+// outer();
 
 
 
 
 
 //-----------------------------------------------------------------------------------------------------------
-//2
+//9
+// console.log(Object.is(-0, +0)); // false
+// console.log(Object.is(NaN, NaN)); // true
+
+// console.log(-0 === +0); // true
+// console.log(NaN === NaN); // false
+// console.log(!NaN === !NaN); // true
+
+// console.log(-0 == +0); // true
+// console.log(NaN == NaN); // false
+// console.log(!NaN == !NaN); // true
 
 
 
