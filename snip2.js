@@ -189,9 +189,62 @@ calling typeof f.
 
 
 //-----------------------------------------------------------------------------------------------------------
-//2
+//10
+//dgive the console oder bellow code
 
 
+console.log("Start");
+
+setTimeout(() => {
+  console.log("setTimeout");
+}, 0);
+
+setImmediate(() => {
+  console.log("setImmediate");
+});
+
+process.nextTick(() => {
+  console.log("nextTick");
+});
+
+console.log("End");
+
+/*
+//output
+Start
+End
+nextTick
+setTimeout / setImmediate (order may vary)
+
+
+//Explanation:
+
+When this code runs, Node.js first executes all the synchronous statements. So console.log("Start") runs immediately,
+then it schedules the async callbacks (setTimeout, setImmediate, and process.nextTick), and then it continues to the 
+next synchronous line console.log("End"). That’s why the first output you see is:
+
+Start
+End
+
+After the synchronous code finishes, Node.js processes the microtask queue, where process.nextTick() has 
+the highest priority. It runs before the event loop continues to other phases like timers or immediates. So the next output will always be:
+
+nextTick
+
+Finally, Node.js moves to the event loop phases where setTimeout (timers phase) and setImmediate (check phase) are executed.
+In this specific case (running in the main module), the order between them is not guaranteed, so you might see either:
+
+setTimeout
+setImmediate
+
+or
+
+setImmediate
+setTimeout
+
+depending on how the event loop schedules them internally.
+
+*/
 
 //-----------------------------------------------------------------------------------------------------------
 //2
