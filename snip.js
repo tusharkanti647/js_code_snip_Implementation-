@@ -3,7 +3,7 @@
 // let b=[];
 // console.log(a==b); //false
 // console.log(a===b); //false
-// console.log(!a==!b); //false
+// console.log(!a==!b); //true
 
 //2
 // let a=[20];
